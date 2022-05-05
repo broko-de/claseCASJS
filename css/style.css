@@ -5,6 +5,7 @@
 
 body{
     background-color: blanchedalmond;
+    font-family: 'Nunito', sans-serif;
 }
 
 button{
@@ -15,6 +16,7 @@ button{
     border-style: solid;
     border: 1px solid #083f8d;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 hr{
@@ -24,4 +26,64 @@ hr{
 input{
     border-radius: 5px;
     padding: 5px;
+    margin-bottom: 10px;
+}
+
+label{
+    font-weight: bold;
+}
+
+.error{
+    color: red;
+}
+
+input.error{
+    border: 2px solid red;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.alert{
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+}
+
+table {
+    caption-side: bottom;
+    border-collapse: collapse;
+}
+
+.table{
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    vertical-align: top;
+}
+
+.table>:not(:first-child) {
+    border-top: 2px solid black;
+}
+
+tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-bottom: 1px solid #1b1b1b;
+    text-align: center;
+}
+
+.trProducto{
+    background-color: aliceblue;
 }

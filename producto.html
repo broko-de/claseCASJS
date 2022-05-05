@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2 - JS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/3682b977b2.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <main>
+        <h2>Creacion de productos</h2>
+        <form action="#" id="formProducto" onsubmit="crearProducto(event)">
+            <div class="alert ">
+
+            </div>
+            <label for="" class="labelF">Nombre</label><br>
+            <input type="text" id="nombre" name="nombre"><br>
+            <label for="" class="labelF">Precio</label><br>
+            <input type="number" id="precio" name="precio"><br>
+            <label for="" class="labelF">Descuento %</label><br>
+            <input type="number" id="descuento" name="descuento" value="0"><br>
+            <label for="" class="labelF">Stock</label><br>
+            <input type="number" id="stock" name="stock"><br>
+            <button type="submit" >Guardar</button>
+            <button type="button" onclick="resetForm()" >Reset</button>
+        </form>
+        <div id="listaProductos">
+            <table id="tablaProductos" class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Descuento</th>
+                        <th>Stock</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr>
+                        <td>TEst</td>
+                        <td>23</td>
+                        <td>10%</td>
+                        <td>23</td>
+                        <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>TEst</td>
+                        <td>23</td>
+                        <td>10%</td>
+                        <td>23</td>
+                        <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- <script src="./js/funciones.js"></script> -->
+    <script src="./js/productos.js"></script>
+
+</body>
+</html>

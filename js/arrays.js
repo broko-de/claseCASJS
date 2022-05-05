@@ -67,9 +67,10 @@ const mostrar = (elemento,indice) =>{
 // frutas.forEach((element,index) => {
 //     console.log(`POSICION: ${index}, elemento: ${element}`);
 // });
+
 frutas.forEach(mostrar);
 
-let edades = [19,29,35,20];
+let edades = [19,2,3,20,50];
 
 const comprobarEdad = (edad) =>{
     return edad >= 18;
@@ -77,4 +78,28 @@ const comprobarEdad = (edad) =>{
 
 console.log(edades.every(comprobarEdad));
 
+const numeros = [1,4,5,8,34,6,2];
 
+const operarNumero = (numero)=>{
+    return numero+10;
+}
+
+let nuevoArray = numeros.map(operarNumero);
+console.log('Nuevo Array: ',nuevoArray);
+console.log('Array Original: ',numeros);
+
+
+const mayorQue18 = (edad) =>{
+    return edad > 18;
+}
+
+let arrayMayores = edades.filter(mayorQue18);
+console.log(arrayMayores);
+
+let jsonStr = '{"nombre":"Juan","apellido":"perez","edad":34}';
+console.log(jsonStr);
+console.log(typeof jsonStr);
+let obj = JSON.parse(jsonStr);
+console.log(obj);
+console.log(typeof obj);
+console.log(obj.nombre);
