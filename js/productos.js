@@ -45,12 +45,18 @@ const renderProductoTabla = (producto)  => {
 }
 
 //ARRAY DE EJEMPLO PARA CARGAR PREVIAMENTE PRODUCTOS
-let arrayProductos = [
-    {id:1,nombre:'Teclado',precio:4333,descuento:10,stock:20},
-    {id:2,nombre:'Monitor',precio:333,descuento:3,stock:33},
-    {id:3,nombre:'Micro',precio:333,descuento:3,stock:33},
+let arrayProductos = [];
+if(localStorage.getItem('productos')){
+    arrayProductos = JSON.parse(localStorage.getItem('productos'));
+}else{
+    arrayProductos = [
+        {id:1,nombre:'Teclado',precio:4333,descuento:10,stock:20},
+        {id:2,nombre:'Monitor',precio:333,descuento:3,stock:33},
+        {id:3,nombre:'Micro',precio:333,descuento:3,stock:33},
+    
+    ];
+}
 
-];
 
 arrayProductos.forEach(renderProductoTabla);
 
@@ -77,7 +83,8 @@ const crearProducto = function(event){
         alertError.classList.add('show');
         return false;
     }
-
+    arrayProductos.push(producto);
+    localStorage.setItem('productos',JSON.stringify(arrayProductos));
     renderProductoTabla(producto);
 }
 
@@ -95,3 +102,11 @@ function eliminarProducto(idProducto){
     //metodo js para eliminar un elemento HTML
     trProducto.remove();
 }
+
+//LOCALSTORAGE
+//localStorage.setItem('unaVariable','Estoy creando un valor');
+let elementP = document.querySelector('#ejemploStorage');
+elementP.innerHTML = localStorage.getItem('unaVariable');
+
+//SESSIONSTORAGE
+// sessionStorage.setItem('test','Algo en la session');
